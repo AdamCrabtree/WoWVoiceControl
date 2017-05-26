@@ -15,7 +15,9 @@ namespace WoWVoiceControl.SpecForms
             GrammarBuilder mageGrammarBuilder = new GrammarBuilder();
             mageGrammarBuilder.Append(GenerateArcaneGrammar(),0,1);
             mageGrammarBuilder.Append(GenerateFireGrammar(),0,1);
-            //mageGrammarBuilder.Append(GenerateFrostGrammar());
+            mageGrammarBuilder.Append(GenerateFrostGrammar());
+            mageGrammarBuilder.Append(GenerateClassAbilityGrammar(), 0, 1);
+            mageGrammarBuilder.Append(GenericHotkeys.GenerateGenericChoices(), 0, 1);
             Grammar mageGrammar = new Grammar(mageGrammarBuilder);
             return mageGrammar;
         }
@@ -34,13 +36,13 @@ namespace WoWVoiceControl.SpecForms
         public static Choices GenerateFrostGrammar()
         {
             Choices commands = new Choices();
-          //  commands.Add(new string[] { "Presence of Mind" });
+            commands.Add(new string[] { "frostbolt", "ice lance", "summon water elemental", "flurry", "ice floes", "cone of cold", "icy veins", "blizzard", "ice barrier", "invisibility", "cold snap", "frozen orb", "ray of frost", "ice nova", "frozen touch", "frost bomb", "glacial spike", "comet storm" });
             return commands;
         }
         public static Choices GenerateClassAbilityGrammar()
         {
             Choices commands = new Choices();
-           // commands.Add("frost nova", "blink", "polymorph", "conjure refreshment", "ice block", "slow fall", "counterspell", "time warp", "spellsteal");
+            commands.Add("frost nova", "blink", "polymorph", "conjure refreshment", "ice block", "slow fall", "counterspell", "time warp", "spellsteal");
             return commands;
         }
     }

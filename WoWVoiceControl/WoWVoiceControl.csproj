@@ -192,6 +192,9 @@
     <EmbeddedResource Include="Class Forms\Mage\Specs\FireHotkeysForm.resx">
       <DependentUpon>FireHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Class Forms\Mage\Specs\FrostHotkeysForm.resx">
+      <DependentUpon>FrostHotkeysForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Class Forms\MonkBaseForm.resx">
       <DependentUpon>MonkBaseForm.cs</DependentUpon>
     </EmbeddedResource>
