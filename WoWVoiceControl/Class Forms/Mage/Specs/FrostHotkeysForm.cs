@@ -150,5 +150,10 @@ namespace WoWVoiceControl.SpecForms
             frostHotkeys.addHotkey("comet storm", keyString);
 
         }
+
+        private void Frost_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

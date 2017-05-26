@@ -150,5 +150,10 @@ namespace WoWVoiceControl.Class_Forms.Mage.Specs
             myForm.Show();
             this.Hide();
         }
+
+        private void FireHotkeysForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

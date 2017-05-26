@@ -42,6 +42,7 @@
             this.bConjureRefreshment = new System.Windows.Forms.Button();
             this.bBlink = new System.Windows.Forms.Button();
             this.bSpellsteal = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -174,11 +175,21 @@
             this.bSpellsteal.Text = "Spellsteal";
             this.bSpellsteal.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(71, 421);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Click here to start recognition";
+            // 
             // MageBaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 561);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bSpellsteal);
             this.Controls.Add(this.bConjureRefreshment);
             this.Controls.Add(this.bBlink);
@@ -195,6 +206,7 @@
             this.Controls.Add(this.label2);
             this.Name = "MageBaseForm";
             this.Text = "MageBaseForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MageBaseForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +228,6 @@
         private System.Windows.Forms.Button bConjureRefreshment;
         private System.Windows.Forms.Button bBlink;
         private System.Windows.Forms.Button bSpellsteal;
+        private System.Windows.Forms.Label label1;
     }
 }

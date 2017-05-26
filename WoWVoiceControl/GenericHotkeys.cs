@@ -12,7 +12,7 @@ namespace WoWVoiceControl
         public static Dictionary<String, String> myDict = new Dictionary<string, string>();
         public static Choices GenerateGenericChoices()
         {
-            Choices genericChoices = new Choices("auto run", "eat", "target");
+            Choices genericChoices = new Choices("auto run", "eat", "target", "mount");
             return genericChoices;
         }
     }

@@ -45,6 +45,7 @@
             this.bIceNova = new System.Windows.Forms.Button();
             this.bRayOfFrost = new System.Windows.Forms.Button();
             this.bAccept = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bFrostBolt
@@ -216,11 +217,21 @@
             this.bAccept.Text = "Accept";
             this.bAccept.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Click on the button and the key that you use for it";
+            // 
             // Frost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 561);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bAccept);
             this.Controls.Add(this.bFrozenTouch);
             this.Controls.Add(this.bGlacialSpike);
@@ -240,8 +251,10 @@
             this.Controls.Add(this.bFrostBolt);
             this.Name = "Frost";
             this.Text = "Frost";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frost_FormClosed);
             this.Load += new System.EventHandler(this.Frost_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -264,5 +277,6 @@
         private System.Windows.Forms.Button bIceNova;
         private System.Windows.Forms.Button bRayOfFrost;
         private System.Windows.Forms.Button bAccept;
+        private System.Windows.Forms.Label label1;
     }
 }

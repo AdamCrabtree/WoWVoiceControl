@@ -46,6 +46,7 @@
             this.bPyroblast = new System.Windows.Forms.Button();
             this.bAccept = new System.Windows.Forms.Button();
             this.bFireball = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bCinderstorm
@@ -228,11 +229,21 @@
             this.bFireball.UseVisualStyleBackColor = true;
             this.bFireball.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bFireball_KeyPress);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 13);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Click on the button and the key that you use for it";
+            // 
             // FireHotkeysForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 561);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bCinderstorm);
             this.Controls.Add(this.bMeteor);
             this.Controls.Add(this.bLivingBomb);
@@ -253,7 +264,9 @@
             this.Controls.Add(this.bFireball);
             this.Name = "FireHotkeysForm";
             this.Text = "FireHotkeysForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FireHotkeysForm_FormClosed);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -277,5 +290,6 @@
         private System.Windows.Forms.Button bPyroblast;
         private System.Windows.Forms.Button bAccept;
         private System.Windows.Forms.Button bFireball;
+        private System.Windows.Forms.Label label1;
     }
 }

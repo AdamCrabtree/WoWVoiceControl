@@ -310,6 +310,7 @@
             this.Controls.Add(this.bPresenceOfMind);
             this.Name = "ArcaneHotkeysForm";
             this.Text = "Arcane";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ArcaneHotkeysForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

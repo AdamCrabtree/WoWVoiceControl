@@ -67,5 +67,10 @@ namespace WoWVoiceControl
             SendKeys.Send(key);
             SendKeys.Send("+2");
         }
+
+        private void MageBaseForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.bAutoRun = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bMount = new System.Windows.Forms.Button();
             this.bEat = new System.Windows.Forms.Button();
             this.bTabTarget = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,14 +44,15 @@
             this.bAutoRun.UseVisualStyleBackColor = true;
             this.bAutoRun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bAutoRun_KeyPress);
             // 
-            // button2
+            // bMount
             // 
-            this.button2.Location = new System.Drawing.Point(103, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bMount.Location = new System.Drawing.Point(103, 99);
+            this.bMount.Name = "bMount";
+            this.bMount.Size = new System.Drawing.Size(75, 23);
+            this.bMount.TabIndex = 1;
+            this.bMount.Text = "Mount";
+            this.bMount.UseVisualStyleBackColor = true;
+            this.bMount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bMount_KeyPress);
             // 
             // bEat
             // 
@@ -80,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.bTabTarget);
             this.Controls.Add(this.bEat);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bMount);
             this.Controls.Add(this.bAutoRun);
             this.Name = "GenericHotkeysForm";
             this.Text = "GenericHotkeysForm";
@@ -91,7 +92,7 @@
         #endregion
 
         private System.Windows.Forms.Button bAutoRun;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bMount;
         private System.Windows.Forms.Button bEat;
         private System.Windows.Forms.Button bTabTarget;
     }

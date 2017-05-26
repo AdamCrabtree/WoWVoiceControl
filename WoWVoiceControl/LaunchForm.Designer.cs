@@ -181,7 +181,8 @@
             this.Controls.Add(this.bHunterLaunch);
             this.Controls.Add(this.bDemonHunterLaunch);
             this.Name = "LaunchForm";
-            this.Text = "Form1";
+            this.Text = "Class Navigation Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LaunchForm_FormClosed);
             this.ResumeLayout(false);
 
         }

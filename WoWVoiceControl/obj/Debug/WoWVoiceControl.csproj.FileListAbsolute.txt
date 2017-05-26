@@ -23,3 +23,5 @@ C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceCon
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.LaunchForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.SpecForms.ArcaneHotkeysForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Mage.Specs.FireHotkeysForm.resources
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.SpecForms.Frost.resources
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.GenericHotkeysForm.resources

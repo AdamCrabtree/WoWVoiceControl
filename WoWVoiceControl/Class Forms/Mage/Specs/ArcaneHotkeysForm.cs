@@ -165,5 +165,10 @@ namespace WoWVoiceControl.SpecForms
             this.Hide();
             myForm.Show();
         }
+
+        private void ArcaneHotkeysForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

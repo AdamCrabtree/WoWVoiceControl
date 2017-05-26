@@ -37,5 +37,12 @@ namespace WoWVoiceControl
             key = GenerateKeyStrings.generateKeyString(key);
             GenericHotkeys.myDict.Add("eat", key);
         }
+
+        private void bMount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string key = e.KeyChar.ToString();
+            key = GenerateKeyStrings.generateKeyString(key);
+            GenericHotkeys.myDict.Add("Mount", key);
+        }
     }
 }
