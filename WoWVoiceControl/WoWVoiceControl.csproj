@@ -72,11 +72,25 @@
     <Compile Include="Class Forms\DeathKnightBaseForm.Designer.cs">
       <DependentUpon>DeathKnightBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\DemonHunterBaseForm.cs">
+    <Compile Include="Class Forms\DemonHunter\DHBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\DemonHunterBaseForm.Designer.cs">
-      <DependentUpon>DemonHunterBaseForm.cs</DependentUpon>
+    <Compile Include="Class Forms\DemonHunter\DHBaseForm.Designer.cs">
+      <DependentUpon>DHBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class Forms\DemonHunter\DHGrammar.cs" />
+    <Compile Include="Class Forms\DemonHunter\DHHotkeys.cs" />
+    <Compile Include="Class Forms\DemonHunter\Specs\HavocHotkeysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class Forms\DemonHunter\Specs\HavocHotkeysForm.Designer.cs">
+      <DependentUpon>HavocHotkeysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class Forms\DemonHunter\Specs\VengeanceHotkeysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class Forms\DemonHunter\Specs\VengeanceHotkeysForm.Designer.cs">
+      <DependentUpon>VengeanceHotkeysForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class Forms\DruidBaseForm.cs">
       <SubType>Form</SubType>
@@ -197,8 +211,14 @@
     <EmbeddedResource Include="Class Forms\DeathKnightBaseForm.resx">
       <DependentUpon>DeathKnightBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\DemonHunterBaseForm.resx">
-      <DependentUpon>DemonHunterBaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Class Forms\DemonHunter\DHBaseForm.resx">
+      <DependentUpon>DHBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class Forms\DemonHunter\Specs\HavocHotkeysForm.resx">
+      <DependentUpon>HavocHotkeysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class Forms\DemonHunter\Specs\VengeanceHotkeysForm.resx">
+      <DependentUpon>VengeanceHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class Forms\DruidBaseForm.resx">
       <DependentUpon>DruidBaseForm.cs</DependentUpon>
