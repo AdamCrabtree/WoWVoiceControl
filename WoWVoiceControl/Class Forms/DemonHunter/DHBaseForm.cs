@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Speech.Recognition;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,9 +59,16 @@ namespace WoWVoiceControl
         private void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             string key;
-            hotkeyList.DHHotkeyDictionary.TryGetValue(e.Result.Text, out key);
-            SendKeys.Send(key);
-            SendKeys.Send("+2");
+            try
+            {
+                hotkeyList.DHHotkeyDictionary.TryGetValue(e.Result.Text, out key);
+                SendKeys.Send(key);
+            }
+            catch
+            {
+                SpeechSynthesizer mySynth = new SpeechSynthesizer();
+                mySynth.SpeakAsync("This ability is not bound!");
+            }
         }
     }
 }
