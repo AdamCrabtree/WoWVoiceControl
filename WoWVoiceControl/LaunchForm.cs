@@ -29,6 +29,7 @@ namespace WoWVoiceControl
         private const int MOUSEEVENTF_RIGHTUP = 0x10;
         public LaunchForm()
         {
+            GenericHotkeys.myDict.Add("target", "{TAB}");
             InitializeComponent();
         }
         
@@ -48,6 +49,13 @@ namespace WoWVoiceControl
         private void LaunchForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void bWarlockLaunch_Click(object sender, EventArgs e)
+        {
+            WarlockBaseForm warlockForm = new WarlockBaseForm();
+            warlockForm.Show();
+            this.Hide();
         }
     }
 }

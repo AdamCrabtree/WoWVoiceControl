@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WoWVoiceControl.SpecForms
 {
-    public partial class Frost : Form
+    public partial class FrostHotkeysForm : Form
     {
         MageHotkeys frostHotkeys = new MageHotkeys();
-        public Frost()
+        public FrostHotkeysForm()
         {
             InitializeComponent();
         }

@@ -142,6 +142,7 @@
             this.bWarlockLaunch.TabIndex = 13;
             this.bWarlockLaunch.Text = "Warlock";
             this.bWarlockLaunch.UseVisualStyleBackColor = true;
+            this.bWarlockLaunch.Click += new System.EventHandler(this.bWarlockLaunch_Click);
             // 
             // bRogueLaunch
             // 

@@ -15,7 +15,7 @@ namespace WoWVoiceControl.SpecForms
             GrammarBuilder mageGrammarBuilder = new GrammarBuilder();
             mageGrammarBuilder.Append(GenerateArcaneGrammar(),0,1);
             mageGrammarBuilder.Append(GenerateFireGrammar(),0,1);
-            mageGrammarBuilder.Append(GenerateFrostGrammar());
+            mageGrammarBuilder.Append(GenerateFrostGrammar(), 0, 1);
             mageGrammarBuilder.Append(GenerateClassAbilityGrammar(), 0, 1);
             mageGrammarBuilder.Append(GenericHotkeys.GenerateGenericChoices(), 0, 1);
             Grammar mageGrammar = new Grammar(mageGrammarBuilder);

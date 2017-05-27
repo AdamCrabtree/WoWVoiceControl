@@ -102,6 +102,26 @@
     <Compile Include="Class Forms\RogueBaseForm.Designer.cs">
       <DependentUpon>RogueBaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class Forms\Warlock\WarlockGrammar.cs" />
+    <Compile Include="Class Forms\Warlock\WarlockHotkeys.cs" />
+    <Compile Include="Class Forms\Warlock\Specs\AfflictionHotkeysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class Forms\Warlock\Specs\AfflictionHotkeysForm.Designer.cs">
+      <DependentUpon>AfflictionHotkeysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class Forms\Warlock\Specs\DemonologyHotkeysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class Forms\Warlock\Specs\DemonologyHotkeysForm.Designer.cs">
+      <DependentUpon>DemonologyHotkeysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class Forms\Warlock\Specs\DestructionHotkeysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class Forms\Warlock\Specs\DestructionHotkeysForm.Designer.cs">
+      <DependentUpon>DestructionHotkeysForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerateKeyStrings.cs" />
     <Compile Include="GenericHotkeys.cs" />
     <Compile Include="GenericHotkeysForm.cs">
@@ -148,10 +168,10 @@
     <Compile Include="Class Forms\ShamanBaseForm.Designer.cs">
       <DependentUpon>ShamanBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\WarlockBaseForm.cs">
+    <Compile Include="Class Forms\Warlock\WarlockBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\WarlockBaseForm.Designer.cs">
+    <Compile Include="Class Forms\Warlock\WarlockBaseForm.Designer.cs">
       <DependentUpon>WarlockBaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class Forms\WarriorBaseForm.cs">
@@ -210,7 +230,16 @@
     <EmbeddedResource Include="Class Forms\ShamanBaseForm.resx">
       <DependentUpon>ShamanBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\WarlockBaseForm.resx">
+    <EmbeddedResource Include="Class Forms\Warlock\Specs\AfflictionHotkeysForm.resx">
+      <DependentUpon>AfflictionHotkeysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class Forms\Warlock\Specs\DemonologyHotkeysForm.resx">
+      <DependentUpon>DemonologyHotkeysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class Forms\Warlock\Specs\DestructionHotkeysForm.resx">
+      <DependentUpon>DestructionHotkeysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class Forms\Warlock\WarlockBaseForm.resx">
       <DependentUpon>WarlockBaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class Forms\WarriorBaseForm.resx">

@@ -102,6 +102,7 @@
             this.bIceBlock.TabIndex = 13;
             this.bIceBlock.Text = "Ice block";
             this.bIceBlock.UseVisualStyleBackColor = true;
+            this.bIceBlock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bIceBlock_KeyPress);
             // 
             // bPolymorph
             // 
@@ -111,6 +112,7 @@
             this.bPolymorph.TabIndex = 12;
             this.bPolymorph.Text = "Polymorph";
             this.bPolymorph.UseVisualStyleBackColor = true;
+            this.bPolymorph.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bPolymorph_KeyPress);
             // 
             // bFrostNova
             // 
@@ -120,6 +122,7 @@
             this.bFrostNova.TabIndex = 11;
             this.bFrostNova.Text = "Frost Nova";
             this.bFrostNova.UseVisualStyleBackColor = true;
+            this.bFrostNova.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bFrostNova_KeyPress);
             // 
             // bSlowFall
             // 
@@ -129,6 +132,7 @@
             this.bSlowFall.TabIndex = 16;
             this.bSlowFall.Text = "Slow Fall";
             this.bSlowFall.UseVisualStyleBackColor = true;
+            this.bSlowFall.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bSlowFall_KeyPress);
             // 
             // bTimeWarp
             // 
@@ -138,6 +142,7 @@
             this.bTimeWarp.TabIndex = 15;
             this.bTimeWarp.Text = "Time Warp";
             this.bTimeWarp.UseVisualStyleBackColor = true;
+            this.bTimeWarp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bTimeWarp_KeyPress);
             // 
             // bCounterspell
             // 
@@ -147,6 +152,7 @@
             this.bCounterspell.TabIndex = 14;
             this.bCounterspell.Text = "Counterspell";
             this.bCounterspell.UseVisualStyleBackColor = true;
+            this.bCounterspell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bCounterspell_KeyPress);
             // 
             // bConjureRefreshment
             // 
@@ -156,6 +162,7 @@
             this.bConjureRefreshment.TabIndex = 18;
             this.bConjureRefreshment.Text = "Conjure Refreshment";
             this.bConjureRefreshment.UseVisualStyleBackColor = true;
+            this.bConjureRefreshment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bConjureRefreshment_KeyPress);
             // 
             // bBlink
             // 
@@ -165,6 +172,7 @@
             this.bBlink.TabIndex = 17;
             this.bBlink.Text = "Blink";
             this.bBlink.UseVisualStyleBackColor = true;
+            this.bBlink.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bBlink_KeyPress);
             // 
             // bSpellsteal
             // 
@@ -174,6 +182,7 @@
             this.bSpellsteal.TabIndex = 19;
             this.bSpellsteal.Text = "Spellsteal";
             this.bSpellsteal.UseVisualStyleBackColor = true;
+            this.bSpellsteal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bSpellsteal_KeyPress);
             // 
             // label1
             // 

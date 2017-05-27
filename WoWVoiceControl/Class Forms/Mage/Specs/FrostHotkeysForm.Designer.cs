@@ -1,6 +1,6 @@
 ﻿namespace WoWVoiceControl.SpecForms
 {
-    partial class Frost
+    partial class FrostHotkeysForm
     {
         /// <summary>
         /// Required designer variable.

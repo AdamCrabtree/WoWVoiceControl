@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
-using System.Speech.Synthesis;
 
-namespace WoWVoiceControl.SpecForms
+namespace WoWVoiceControl.Class_Forms.Warlock
 {
-    public class MageHotkeys
+    public class WarlockHotkeys
     {
-        public Dictionary<string, string> mageHotkeyDictionary;
-        public MageHotkeys()
+        public Dictionary<string, string> WarlockHotkeyDictionary;
+        public WarlockHotkeys()
         {
-            this.mageHotkeyDictionary = GenericHotkeys.myDict;
+            this.WarlockHotkeyDictionary = GenericHotkeys.myDict;
         }
         public void addHotkey(String abilityNameString, String hotkeyString)
         {
             try
             {
-                mageHotkeyDictionary.Add(abilityNameString, hotkeyString);
+                WarlockHotkeyDictionary.Add(abilityNameString, hotkeyString);
             }
             catch
             {

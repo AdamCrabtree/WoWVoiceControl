@@ -24,3 +24,4 @@ C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceCon
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.csproj.GenerateResource.Cache
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.exe
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.pdb
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.csprojResolveAssemblyReference.cache
