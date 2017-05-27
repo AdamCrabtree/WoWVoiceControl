@@ -9,7 +9,6 @@ C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceCon
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.HunterBaseForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.MageBaseForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.Class_Forms.Mage.Specs.FireHotkeysForm.resources
-C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.SpecForms.Frost.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.MonkBaseForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.PaladinBaseForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.PriestBaseForm.resources
@@ -25,3 +24,7 @@ C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceCon
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.exe
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.pdb
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.csprojResolveAssemblyReference.cache
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.SpecForms.FrostHotkeysForm.resources
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.Class_Forms.Warlock.Specs.AfflictionHotkeysForm.resources
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.Class_Forms.Warlock.Specs.DemonologyHotkeysForm.resources
+C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Release\WoWVoiceControl.Class_Forms.Warlock.Specs.DestructionHotkeysForm.resources
