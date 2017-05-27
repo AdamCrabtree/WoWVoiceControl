@@ -57,5 +57,12 @@ namespace WoWVoiceControl
             warlockForm.Show();
             this.Hide();
         }
+
+        private void bDemonHunterLaunch_Click(object sender, EventArgs e)
+        {
+            DHBaseForm Dhform = new DHBaseForm();
+            Dhform.Show();
+            this.Hide();
+        }
     }
 }

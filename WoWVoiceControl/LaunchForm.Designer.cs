@@ -51,6 +51,7 @@
             this.bDemonHunterLaunch.TabIndex = 3;
             this.bDemonHunterLaunch.Text = "Demon Hunter";
             this.bDemonHunterLaunch.UseVisualStyleBackColor = true;
+            this.bDemonHunterLaunch.Click += new System.EventHandler(this.bDemonHunterLaunch_Click);
             // 
             // bHunterLaunch
             // 

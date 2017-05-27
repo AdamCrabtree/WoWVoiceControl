@@ -28,3 +28,35 @@ C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceCon
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Warlock.Specs.AfflictionHotkeysForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Warlock.Specs.DemonologyHotkeysForm.resources
 C:\Users\acrab\Documents\Visual Studio 2015\Projects\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Warlock.Specs.DestructionHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\bin\Debug\WoWVoiceControl.exe.config
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.exe
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.pdb
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\bin\Debug\WoWVoiceControl.exe
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\bin\Debug\WoWVoiceControl.pdb
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\bin\Debug\WindowsInput.dll
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\bin\Debug\WindowsInput.xml
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.csprojResolveAssemblyReference.cache
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.DeathKnightBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.DHBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.DemonHunter.Specs.HavocHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.SpecForms.VengeanceHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.DruidBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.HunterBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.MageBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Mage.Specs.FireHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.SpecForms.FrostHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.MonkBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.PaladinBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.PriestBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.RogueBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.ShamanBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Warlock.Specs.AfflictionHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Warlock.Specs.DemonologyHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Class_Forms.Warlock.Specs.DestructionHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.WarlockBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.WarriorBaseForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.GenericHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.LaunchForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.Properties.Resources.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.SpecForms.ArcaneHotkeysForm.resources
+C:\Users\Joe\Documents\GitHub\WoWVoiceControl\WoWVoiceControl\obj\Debug\WoWVoiceControl.csproj.GenerateResource.Cache
