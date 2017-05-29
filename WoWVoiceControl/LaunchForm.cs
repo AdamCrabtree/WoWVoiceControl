@@ -29,7 +29,7 @@ namespace WoWVoiceControl
         private const int MOUSEEVENTF_RIGHTUP = 0x10;
         public LaunchForm()
         {
-            GenericHotkeys.myDict.Add("target", "{TAB}");
+            GenericHotkeys.GenericKeys.Add("target", "{TAB}");
             InitializeComponent();
         }
         
@@ -48,7 +48,7 @@ namespace WoWVoiceControl
 
         private void LaunchForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+           Application.Exit();
         }
 
         private void bWarlockLaunch_Click(object sender, EventArgs e)
@@ -60,9 +60,15 @@ namespace WoWVoiceControl
 
         private void bDemonHunterLaunch_Click(object sender, EventArgs e)
         {
-            DHBaseForm Dhform = new DHBaseForm();
-            Dhform.Show();
-            this.Hide();
+            DemonHunterBaseForm demonhunterForm = FormProvider.DemonHunterBaseForm;
+            demonhunterForm.Show();
+
+            Hide();
+        }
+
+        private void LaunchForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
