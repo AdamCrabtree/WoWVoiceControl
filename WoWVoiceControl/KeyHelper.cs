@@ -90,6 +90,13 @@ namespace WoWVoiceControl
 
             foreach (string s in individualKeys.Where(s => !s.Equals(string.Empty)))
             {
+                string final = s;
+
+                if (final.StartsWith("D"))
+                    final = final.Remove(0, 1);
+                else if (final.StartsWith("NumPad"))
+                    final = final.Remove(0, 6);
+
                 switch (s)
                 {
                     case "LeftCtrl":
@@ -97,8 +104,11 @@ namespace WoWVoiceControl
                         break;
 
                     default:
-                        result.Append("{" + s + "}");
-                        break;
+                        {
+                            
+                            result.Append("{" + final + "}");
+                            break;
+                        }
                 }
             }
                 

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace WoWVoiceControl
 {
+    /// <summary>
+    /// Base class for all different classes. 
+    /// </summary>
     public class WoWClass
     {
         private Dictionary<string, string> classAbilityDictionary;

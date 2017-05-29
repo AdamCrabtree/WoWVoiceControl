@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WoWVoiceControl.SpecForms
@@ -33,7 +26,18 @@ namespace WoWVoiceControl.SpecForms
 
         private void AbilitiesDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
-            (sender as DataGridView).CurrentCell.Value = KeyHelper.GetFormattedKeyString();
+            if ((sender as DataGridView).CurrentCellAddress.X == 1)
+            {
+                string formattedString = KeyHelper.GetFormattedKeyString();
+
+                if (formattedString.Contains("NumPad"))
+                {
+                    MessageBox.Show("Numpad keybinds not allowed (yet)");
+                    return;
+                }
+
+                (sender as DataGridView).CurrentCell.Value = formattedString;
+            }
         }
 
         private void VengeanceHotkeysForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -60,14 +64,13 @@ namespace WoWVoiceControl.SpecForms
             foreach (DataGridViewRow row in abilitiesDataGridView.Rows)
             {
                 // Get the name of current ability
-               string currentAbilityName = row.Cells["abilityNameColumn"].Value.ToString();
+                string currentAbilityName = row.Cells["abilityNameColumn"].Value.ToString();
 
-                if (row.Cells["keybindColumn"].Value == null)
+                if (row.Cells["keybindColumn"].Value == null || row.Cells["keybindColumn"].Value.Equals("Press key(s) to set keybinding..."))
                     continue;
 
                 // Get the key
                 string key = row.Cells["keybindColumn"].Value.ToString();
-
 
                 key = KeyHelper.GetKeyString(key);
 

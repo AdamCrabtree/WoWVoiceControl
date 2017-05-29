@@ -38,12 +38,30 @@ namespace WoWVoiceControl
         public static WarlockBaseForm WarlockBaseForm => warlockBaseForm ?? (warlockBaseForm = new WarlockBaseForm());
 
         private static AfflictionHotkeysForm afflictionHotkeysForm = null;
-        public static AfflictionHotkeysForm AfflictionHotkeysForm(WarlockHotkeys keys) => afflictionHotkeysForm ?? (afflictionHotkeysForm = new AfflictionHotkeysForm(keys));
+        public static AfflictionHotkeysForm AfflictionHotkeysForm(WarlockHotkeys keys)
+        {
+            if (afflictionHotkeysForm != null && afflictionHotkeysForm.IsDisposed)
+                afflictionHotkeysForm = null;
+
+            return afflictionHotkeysForm ?? (afflictionHotkeysForm = new AfflictionHotkeysForm(keys));
+        }
 
         private static DemonologyHotkeysForm demonologyHotKeysForm = null;
-        public static DemonologyHotkeysForm DemonologyHotkeysForm(WarlockHotkeys hotkeys) => demonologyHotKeysForm ?? (demonologyHotKeysForm = new DemonologyHotkeysForm(hotkeys));
+        public static DemonologyHotkeysForm DemonologyHotkeysForm(WarlockHotkeys hotkeys)
+        {
+            if (demonologyHotKeysForm != null && demonologyHotKeysForm.IsDisposed)
+                demonologyHotKeysForm = null;
+
+            return demonologyHotKeysForm ?? (demonologyHotKeysForm = new DemonologyHotkeysForm(hotkeys));
+        }
 
         private static DestructionHotkeysForm destructionHotKeysForm = null;
-        public static DestructionHotkeysForm DestructionHotkeysForm(WarlockHotkeys keys) => destructionHotKeysForm ?? (destructionHotKeysForm = new DestructionHotkeysForm(keys));
+        public static DestructionHotkeysForm DestructionHotkeysForm(WarlockHotkeys keys)
+        {
+            if (destructionHotKeysForm != null && destructionHotKeysForm.IsDisposed)
+                destructionHotKeysForm = null;
+
+            return destructionHotKeysForm ?? (destructionHotKeysForm = new DestructionHotkeysForm(keys));
+        }
     }
 }

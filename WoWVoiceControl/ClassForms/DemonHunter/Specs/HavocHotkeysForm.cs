@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Windows.Input;
 using WoWVoiceControl.SpecForms;
 
 namespace WoWVoiceControl.ClassForms.DemonHunter.Specs
@@ -20,7 +16,7 @@ namespace WoWVoiceControl.ClassForms.DemonHunter.Specs
             HavocHotkeys = keys;
 
             // If the ability name column is entered, deseslect. Ability name doesn't have to be selected.
-            abilitiesDataGridView.CellEnter += (sender, e) => { if (e.ColumnIndex == 0)  (sender as DataGridView).ClearSelection(); };
+            abilitiesDataGridView.CellEnter += (sender, e) => { if (e.ColumnIndex == 0) (sender as DataGridView).ClearSelection(); };
 
             abilitiesDataGridView.ClearSelection();
 
@@ -31,7 +27,18 @@ namespace WoWVoiceControl.ClassForms.DemonHunter.Specs
 
         private void AbilitiesDataGridView_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            (sender as DataGridView).CurrentCell.Value = KeyHelper.GetFormattedKeyString();
+            if ((sender as DataGridView).CurrentCellAddress.X == 1)
+            {
+                string formattedString = KeyHelper.GetFormattedKeyString();
+
+                if (formattedString.Contains("NumPad"))
+                {
+                    MessageBox.Show("Numpad keybinds not allowed (yet)");
+                    return;
+                }
+
+                (sender as DataGridView).CurrentCell.Value = formattedString;
+            }
         }
 
         private void HavocHotkeysForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,7 +86,7 @@ namespace WoWVoiceControl.ClassForms.DemonHunter.Specs
             catch (NullReferenceException)
             {
                 if (MessageBox.Show($"Please complete keybind entry before clicking accept. {currentAbilityName}", "", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
-                    Close();    
+                    Close();
             }
             catch (ArgumentException ex)
             {
@@ -98,6 +105,12 @@ namespace WoWVoiceControl.ClassForms.DemonHunter.Specs
 
                 abilitiesDataGridView.Rows[index].Cells["abilityNameColumn"].Value = ability;
             }
+        }
+
+
+        private void HavocHotkeysForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,11 +41,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 28);
+            this.label2.Location = new System.Drawing.Point(78, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 13);
+            this.label2.Size = new System.Drawing.Size(231, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Check Submenus for specifc hotkeys";
+            this.label2.Text = "Press the buttons to edit spec specific keybinds";
             // 
             // bVengeance
             // 

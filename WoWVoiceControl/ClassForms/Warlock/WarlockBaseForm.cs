@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WoWVoiceControl.ClassForms.Warlock;
-using WoWVoiceControl.ClassForms.Warlock.Specs;
 
 namespace WoWVoiceControl
 {
@@ -27,13 +20,59 @@ namespace WoWVoiceControl
             InitializeComponent();
 
             hotkeyList = new WarlockHotkeys();
+
+            FormClosed += WarlockBaseForm_FormClosed;
+
+            // If the ability name column is entered, deseslect. Ability name doesn't have to be selected.
+            abilitiesDataGridView.CellEnter += (sender, e) => { if (e.ColumnIndex == 0) (sender as DataGridView).ClearSelection(); };
+
+            abilitiesDataGridView.ClearSelection();
+
+            abilitiesDataGridView.KeyDown += AbilitiesDataGridView_KeyDown;
+            abilitiesDataGridView.CellEnter += AbilitiesDataGridView_CellEnter;
+            abilitiesDataGridView.CellLeave += AbilitiesDataGridView_CellLeave;
         }
-       
+
+        private void AbilitiesDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((sender as DataGridView).CurrentCellAddress.X == 1)
+            {
+                string formattedString = KeyHelper.GetFormattedKeyString();
+
+                if (formattedString.Contains("NumPad"))
+                {
+                    MessageBox.Show("Numpad keybinds not allowed (yet)");
+                    return;
+                }
+
+                (sender as DataGridView).CurrentCell.Value = formattedString;
+            }
+        }
+
+        // Clear cell if keybinding was not set
+        private void AbilitiesDataGridView_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1 && (sender as DataGridView).CurrentCell.Value.Equals("Press key(s) to set keybinding..."))
+                (sender as DataGridView).CurrentCell.Value = string.Empty;
+        }
+
+        // Prompt to set keybinding
+        private void AbilitiesDataGridView_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+                (sender as DataGridView).CurrentCell.Value = "Press key(s) to set keybinding...";
+        }
+
+        private void WarlockBaseForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void bAffliction_Click(object sender, EventArgs e)
         {
-            //AfflictionHotkeysForm afflictionForm = new AfflictionHotkeysForm();
-            //afflictionForm.Show();
-            //this.Hide();
+            FormProvider.AfflictionHotkeysForm(hotkeyList).Show();
+
+            this.Hide();
         }
 
         private void bDemonology_Click(object sender, EventArgs e)
@@ -52,9 +91,25 @@ namespace WoWVoiceControl
 
         private void bStart_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in abilitiesDataGridView.Rows)
+            {
+                // Get the name of current ability
+                string currentAbilityName = row.Cells["abilityNameColumn"].Value.ToString();
+
+                if (row.Cells["keybindColumn"].Value == null || row.Cells["keybindColumn"].Value.Equals("Press key(s) to set keybinding..."))
+                    continue;
+
+                // Get the key
+                string key = row.Cells["keybindColumn"].Value.ToString();
+
+                key = KeyHelper.GetKeyString(key);
+
+                hotkeyList.AddHotKey(currentAbilityName, key);
+            }
+
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             Process p = Process.GetProcessesByName("Wow-64").FirstOrDefault();
-           // IntPtr h = p.MainWindowHandle;
+            // IntPtr h = p.MainWindowHandle;
             recEngine.LoadGrammarAsync(WarlockGrammar.GenerateWarlockGrammar());
             recEngine.SetInputToDefaultAudioDevice();
             recEngine.RecognizeAsync(RecognizeMode.Multiple);
@@ -74,220 +129,19 @@ namespace WoWVoiceControl
             }
         }
 
-        private void bDrainLife_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("drain life", keyString);
-        }
-
-        private void bSummonImp_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("summon imp", keyString);
-
-        }
-
-        private void bSoulLeach_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("soul leach", keyString);
-
-
-        }
-
-        private void bCreateHealthstone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("create healthstone", keyString);
-
-        }
-
-        private void bSummonVoidwalker_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("summon voidwalker", keyString);
-
-
-        }
-
-        private void bFear_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("fear", keyString);
-
-        }
-
-        private void bSoulstone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("soulstone", keyString);
-
-        }
-
-        private void bHealthFunnel_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("health funnel", keyString);
-
-
-        }
-
-        private void bEyeOfKilrogg_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("eye of kilrogg", keyString);
-
-        }
-
-        private void bUnendingBreath_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("unending breath", keyString);
-
-        }
-
-        private void bSummonSuccubus_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("summon succubus", keyString);
-
-        }
-
-        private void bCommandDemon_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("command demon", keyString);
-
-        }
-
-        private void bBanish_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("banish", keyString);
-
-        }
-
-        private void bLifeTap_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("life tap", keyString);
-
-        }
-
-        private void bSummonFelhunter_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("summon felhunter", keyString);
-
-        }
-
-        private void bSummonInfernal_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("summon infernal", keyString);
-
-
-        }
-
-        private void bEnslaveDemon_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("enslave demon", keyString);
-
-
-        }
-
-        private void bSummonDoomguard_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("summon doomguard", keyString);
-
-        }
-
-        private void bUnendingResolve_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("unending resolve", keyString);
-
-        }
-
-        private void bCreateSoulwell_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("create soulwell", keyString);
-
-
-        }
-
-        private void bDemonicGateway_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("demonic gateway", keyString);
-        }
-
-        private void bRitualOfSummoning_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("ritual of summoning", keyString);
-        }
-
-        private void bDemonicCircle_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("demonic circle", keyString);
-
-        }
-
-        private void bMortalCoil_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("mortal coil", keyString);
-
-        }
-
-        private void bShadowfury_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("shadow fury", keyString);
-
-        }
-
-        private void bSoulharvest_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string keyString = e.KeyChar.ToString();
-            keyString = GenerateKeyStrings.generateKeyString(keyString);
-            hotkeyList.AddHotKey("soul harvest", keyString);
-
-        }
-
         private void WarlockBaseForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Application.Exit();
+
+        }
+
+        private void WarlockBaseForm_Load(object sender, EventArgs e)
+        {
+            foreach (string ability in WarlockGrammar.BaseWarlockAbilities)
+            {
+                int index = abilitiesDataGridView.Rows.Add();
+
+                abilitiesDataGridView.Rows[index].Cells["abilityNameColumn"].Value = ability;
+            }
         }
     }
 }

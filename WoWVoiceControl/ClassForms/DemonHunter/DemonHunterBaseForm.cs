@@ -25,8 +25,6 @@ namespace WoWVoiceControl
             hotkeyList = new DemonHunterHotkeys();
 
 
-           //abilitiesDataGridView.EditingControlShowing += AbilitiesDataGridView_EditingControlShowing;
-
             // If the ability name column is entered, deseslect. Ability name doesn't have to be selected.
             abilitiesDataGridView.CellEnter += (sender, e) => { if (e.ColumnIndex == 0) (sender as DataGridView).ClearSelection(); };
 
@@ -55,7 +53,18 @@ namespace WoWVoiceControl
         // Set the cell to the formatted key value
         private void AbilitiesDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
-            (sender as DataGridView).CurrentCell.Value = KeyHelper.GetFormattedKeyString();
+            if ((sender as DataGridView).CurrentCellAddress.X == 1)
+            {
+                string formattedString = KeyHelper.GetFormattedKeyString();
+
+                if (formattedString.Contains("NumPad"))
+                {
+                    MessageBox.Show("Numpad keybinds not allowed (yet)");
+                    return;
+                }
+
+                (sender as DataGridView).CurrentCell.Value = formattedString;
+            }            
         }
 
         private void DemonHunterBaseForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -80,7 +89,6 @@ namespace WoWVoiceControl
 
         private void bStart_Click(object sender, EventArgs e)
         {
-
             // When start is clicked, iterate through table rows to set the keybindings to the key string that will be sent to SendKeys
             foreach (DataGridViewRow row in abilitiesDataGridView.Rows)
             {
@@ -108,7 +116,7 @@ namespace WoWVoiceControl
                 hotkeyList.ClassAbilityDictionary.TryGetValue(e.Result.Text, out key);
                 SendKeys.Send(key);
             }
-            catch
+            catch 
             {
                 SpeechSynthesizer mySynth = new SpeechSynthesizer();
                 mySynth.SpeakAsync("This ability is not bound!");
