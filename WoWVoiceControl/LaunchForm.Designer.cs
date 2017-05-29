@@ -185,6 +185,7 @@
             this.Name = "LaunchForm";
             this.Text = "Class Navigation Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LaunchForm_FormClosed);
+            this.Load += new System.EventHandler(this.LaunchForm_Load);
             this.ResumeLayout(false);
 
         }

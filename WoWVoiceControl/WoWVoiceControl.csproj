@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Speech" />
@@ -60,82 +61,84 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad, processorArchitecture=MSIL">
       <HintPath>..\packages\InputSimulator.1.0.4.0\lib\net20\WindowsInput.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Forms\DeathKnightBaseForm.cs">
+    <Compile Include="ClassForms\DeathKnightBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\DeathKnightBaseForm.Designer.cs">
+    <Compile Include="ClassForms\DeathKnightBaseForm.Designer.cs">
       <DependentUpon>DeathKnightBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\DemonHunter\DHBaseForm.cs">
+    <Compile Include="ClassForms\DemonHunter\DemonHunterBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\DemonHunter\DHBaseForm.Designer.cs">
-      <DependentUpon>DHBaseForm.cs</DependentUpon>
+    <Compile Include="ClassForms\DemonHunter\DemonHunterBaseForm.Designer.cs">
+      <DependentUpon>DemonHunterBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\DemonHunter\DHGrammar.cs" />
-    <Compile Include="Class Forms\DemonHunter\DHHotkeys.cs" />
-    <Compile Include="Class Forms\DemonHunter\Specs\HavocHotkeysForm.cs">
+    <Compile Include="ClassForms\DemonHunter\DemonHunterGrammar.cs" />
+    <Compile Include="ClassForms\DemonHunter\DemonHunterHotkeys.cs" />
+    <Compile Include="ClassForms\DemonHunter\Specs\HavocHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\DemonHunter\Specs\HavocHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\DemonHunter\Specs\HavocHotkeysForm.Designer.cs">
       <DependentUpon>HavocHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\DemonHunter\Specs\VengeanceHotkeysForm.cs">
+    <Compile Include="ClassForms\DemonHunter\Specs\VengeanceHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\DemonHunter\Specs\VengeanceHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\DemonHunter\Specs\VengeanceHotkeysForm.Designer.cs">
       <DependentUpon>VengeanceHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\DruidBaseForm.cs">
+    <Compile Include="ClassForms\DruidBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\DruidBaseForm.Designer.cs">
+    <Compile Include="ClassForms\DruidBaseForm.Designer.cs">
       <DependentUpon>DruidBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\HunterBaseForm.cs">
+    <Compile Include="ClassForms\HunterBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\HunterBaseForm.Designer.cs">
+    <Compile Include="ClassForms\HunterBaseForm.Designer.cs">
       <DependentUpon>HunterBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Mage\Specs\FireHotkeysForm.cs">
+    <Compile Include="ClassForms\Mage\Specs\FireHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Mage\Specs\FireHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\Mage\Specs\FireHotkeysForm.Designer.cs">
       <DependentUpon>FireHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\RogueBaseForm.cs">
+    <Compile Include="ClassForms\RogueBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\RogueBaseForm.Designer.cs">
+    <Compile Include="ClassForms\RogueBaseForm.Designer.cs">
       <DependentUpon>RogueBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Warlock\WarlockGrammar.cs" />
-    <Compile Include="Class Forms\Warlock\WarlockHotkeys.cs" />
-    <Compile Include="Class Forms\Warlock\Specs\AfflictionHotkeysForm.cs">
+    <Compile Include="ClassForms\Warlock\WarlockGrammar.cs" />
+    <Compile Include="ClassForms\Warlock\WarlockHotkeys.cs" />
+    <Compile Include="ClassForms\Warlock\Specs\AfflictionHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Warlock\Specs\AfflictionHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\Warlock\Specs\AfflictionHotkeysForm.Designer.cs">
       <DependentUpon>AfflictionHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Warlock\Specs\DemonologyHotkeysForm.cs">
+    <Compile Include="ClassForms\Warlock\Specs\DemonologyHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Warlock\Specs\DemonologyHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\Warlock\Specs\DemonologyHotkeysForm.Designer.cs">
       <DependentUpon>DemonologyHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Warlock\Specs\DestructionHotkeysForm.cs">
+    <Compile Include="ClassForms\Warlock\Specs\DestructionHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Warlock\Specs\DestructionHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\Warlock\Specs\DestructionHotkeysForm.Designer.cs">
       <DependentUpon>DestructionHotkeysForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProvider.cs" />
     <Compile Include="GenerateKeyStrings.cs" />
     <Compile Include="GenericHotkeys.cs" />
     <Compile Include="GenericHotkeysForm.cs">
@@ -144,125 +147,127 @@
     <Compile Include="GenericHotkeysForm.Designer.cs">
       <DependentUpon>GenericHotkeysForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyHelper.cs" />
     <Compile Include="LaunchForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LaunchForm.Designer.cs">
       <DependentUpon>LaunchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Mage\MageBaseForm.cs">
+    <Compile Include="ClassForms\Mage\MageBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Mage\MageBaseForm.Designer.cs">
+    <Compile Include="ClassForms\Mage\MageBaseForm.Designer.cs">
       <DependentUpon>MageBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\MonkBaseForm.cs">
+    <Compile Include="ClassForms\MonkBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\MonkBaseForm.Designer.cs">
+    <Compile Include="ClassForms\MonkBaseForm.Designer.cs">
       <DependentUpon>MonkBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\PaladinBaseForm.cs">
+    <Compile Include="ClassForms\PaladinBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\PaladinBaseForm.Designer.cs">
+    <Compile Include="ClassForms\PaladinBaseForm.Designer.cs">
       <DependentUpon>PaladinBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\PriestBaseForm.cs">
+    <Compile Include="ClassForms\PriestBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\PriestBaseForm.Designer.cs">
+    <Compile Include="ClassForms\PriestBaseForm.Designer.cs">
       <DependentUpon>PriestBaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Class Forms\ShamanBaseForm.cs">
+    <Compile Include="ClassForms\ShamanBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\ShamanBaseForm.Designer.cs">
+    <Compile Include="ClassForms\ShamanBaseForm.Designer.cs">
       <DependentUpon>ShamanBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Warlock\WarlockBaseForm.cs">
+    <Compile Include="ClassForms\Warlock\WarlockBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Warlock\WarlockBaseForm.Designer.cs">
+    <Compile Include="ClassForms\Warlock\WarlockBaseForm.Designer.cs">
       <DependentUpon>WarlockBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\WarriorBaseForm.cs">
+    <Compile Include="ClassForms\WarriorBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\WarriorBaseForm.Designer.cs">
+    <Compile Include="ClassForms\WarriorBaseForm.Designer.cs">
       <DependentUpon>WarriorBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Mage\Specs\ArcaneHotkeysForm.cs">
+    <Compile Include="ClassForms\Mage\Specs\ArcaneHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Mage\Specs\ArcaneHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\Mage\Specs\ArcaneHotkeysForm.Designer.cs">
       <DependentUpon>ArcaneHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Mage\Specs\FrostHotkeysForm.cs">
+    <Compile Include="ClassForms\Mage\Specs\FrostHotkeysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class Forms\Mage\Specs\FrostHotkeysForm.Designer.cs">
+    <Compile Include="ClassForms\Mage\Specs\FrostHotkeysForm.Designer.cs">
       <DependentUpon>FrostHotkeysForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class Forms\Mage\MageGrammar.cs" />
-    <Compile Include="Class Forms\Mage\MageHotkeys.cs" />
-    <EmbeddedResource Include="Class Forms\DeathKnightBaseForm.resx">
+    <Compile Include="ClassForms\Mage\MageGrammar.cs" />
+    <Compile Include="ClassForms\Mage\MageHotkeys.cs" />
+    <Compile Include="WoWClass.cs" />
+    <EmbeddedResource Include="ClassForms\DeathKnightBaseForm.resx">
       <DependentUpon>DeathKnightBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\DemonHunter\DHBaseForm.resx">
-      <DependentUpon>DHBaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClassForms\DemonHunter\DemonHunterBaseForm.resx">
+      <DependentUpon>DemonHunterBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\DemonHunter\Specs\HavocHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\DemonHunter\Specs\HavocHotkeysForm.resx">
       <DependentUpon>HavocHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\DemonHunter\Specs\VengeanceHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\DemonHunter\Specs\VengeanceHotkeysForm.resx">
       <DependentUpon>VengeanceHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\DruidBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\DruidBaseForm.resx">
       <DependentUpon>DruidBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\HunterBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\HunterBaseForm.resx">
       <DependentUpon>HunterBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Mage\MageBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\Mage\MageBaseForm.resx">
       <DependentUpon>MageBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Mage\Specs\FireHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\Mage\Specs\FireHotkeysForm.resx">
       <DependentUpon>FireHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Mage\Specs\FrostHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\Mage\Specs\FrostHotkeysForm.resx">
       <DependentUpon>FrostHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\MonkBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\MonkBaseForm.resx">
       <DependentUpon>MonkBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\PaladinBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\PaladinBaseForm.resx">
       <DependentUpon>PaladinBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\PriestBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\PriestBaseForm.resx">
       <DependentUpon>PriestBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\RogueBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\RogueBaseForm.resx">
       <DependentUpon>RogueBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\ShamanBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\ShamanBaseForm.resx">
       <DependentUpon>ShamanBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Warlock\Specs\AfflictionHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\Warlock\Specs\AfflictionHotkeysForm.resx">
       <DependentUpon>AfflictionHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Warlock\Specs\DemonologyHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\Warlock\Specs\DemonologyHotkeysForm.resx">
       <DependentUpon>DemonologyHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Warlock\Specs\DestructionHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\Warlock\Specs\DestructionHotkeysForm.resx">
       <DependentUpon>DestructionHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\Warlock\WarlockBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\Warlock\WarlockBaseForm.resx">
       <DependentUpon>WarlockBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class Forms\WarriorBaseForm.resx">
+    <EmbeddedResource Include="ClassForms\WarriorBaseForm.resx">
       <DependentUpon>WarriorBaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenericHotkeysForm.resx">
@@ -280,7 +285,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Class Forms\Mage\Specs\ArcaneHotkeysForm.resx">
+    <EmbeddedResource Include="ClassForms\Mage\Specs\ArcaneHotkeysForm.resx">
       <DependentUpon>ArcaneHotkeysForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
